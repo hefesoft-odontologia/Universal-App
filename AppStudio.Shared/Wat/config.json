@@ -1,0 +1,29 @@
+{
+  "baseURL": "https://citas-hefesoft.azurewebsites.net/",
+  "share": {
+    "enabled": true,
+    "title": "Citas",
+    "url": "{currentURL}",
+    "message": "Check out this web {url}"
+  },
+  "appBar": {
+    "enabled": true,
+    "buttons": [
+      {
+        "label": "refrescar",
+        "icon": "refresh",
+        "iconUrl": "",
+        "action": "refresh"
+      }
+    ]
+  },
+  "settings": {
+    "enabled": true,
+    "privacyUrl": "",
+    "title": "About",
+    "header": "Web App Template",
+    "HTMLText1": "The Web App Template deliver great mobile websites to your Windows Phone. Get convenient access to all of the site&apos;s mobile web features directly from your app list, plus the ability to pin a tile to your start screen.",
+    "HTMLText2": "",
+    "HTMLText3": ""
+  }
+}
