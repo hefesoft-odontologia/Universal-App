@@ -132,6 +132,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Lib\AppStudio.Common.dll</HintPath>
     </Reference>
+    <Reference Include="Hefesoft.Standard, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hefesoft.Standard.0.0.0.1\lib\Hefesoft.Standard.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Threading.Tasks">
       <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\wpa81\Microsoft.Threading.Tasks.dll</HintPath>
     </Reference>
@@ -158,10 +162,6 @@
     <ProjectReference Include="..\AppStudio.Data\AppStudio.Data.csproj">
       <Project>{ac8575c8-8c87-4a46-8a79-e5376436ed74}</Project>
       <Name>AppStudio.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Hefesoft.Standard\Hefesoft.Standard\Hefesoft.Standard.csproj">
-      <Project>{be8a7bbe-489a-496b-8817-005f76005cc6}</Project>
-      <Name>Hefesoft.Standard</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(TargetPlatformIdentifier)' == '' ">

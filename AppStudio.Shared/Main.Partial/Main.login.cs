@@ -41,6 +41,8 @@ namespace AppStudio.Views
                     {
                         push(valor);
                     }
+
+                    timer();
                 }
                 //mostrarMensaje(tipo);
                 //toast(tipo);
@@ -102,5 +104,19 @@ namespace AppStudio.Views
         public Hefesoft.Standard.Util.Auth.Auth auth { get; set; }
 
         public static string varControlEvitarDobleLlamado { get; set; }
+
+        public void timer()
+        {
+            dispatcherTimer = new DispatcherTimer();
+            dispatcherTimer.Tick += (m, n) => 
+            {
+                varControlEvitarDobleLlamado = "";
+                dispatcherTimer.Stop();            
+            };
+            dispatcherTimer.Interval = new TimeSpan(0, 0, 5);            
+            dispatcherTimer.Start();
+        }
+
+        public DispatcherTimer dispatcherTimer { get; set; }
     }
 }
