@@ -41,6 +41,14 @@ namespace AppStudio.Views
                     {
                         push(valor);
                     }
+                    else if (tipo.Equals("Alert"))
+                    {
+                        alert(valor);
+                    }
+                    else if (tipo.Equals("Toast"))
+                    {
+                        toast(valor);
+                    }
 
                     timer();
                 }
@@ -51,6 +59,27 @@ namespace AppStudio.Views
             {
                 
             }
+        }
+
+        private async void alert(string[] valor)
+        {
+            try
+            {
+                var mensaje = valor[1];
+                var dialog = new MessageDialog(mensaje);
+                await dialog.ShowAsync();
+            }
+            catch (Exception e) { }
+        }
+
+        private async void toast(string[] valor)
+        {
+            try
+            {
+                var mensaje = valor[1];
+                AppStudio.ToastNotifications.DisplayPackageImageToast.Display(mensaje);
+            }
+            catch (Exception e) { }
         }
 
        
@@ -83,21 +112,6 @@ namespace AppStudio.Views
                 mensaje = mensaje
             });            
         } 
-
-        public async void mostrarMensaje(string mensaje)
-        {
-            try
-            {
-                var dialog = new MessageDialog(mensaje);
-                await dialog.ShowAsync();
-            }
-            catch (Exception e) { }
-        }
-
-        public async void toast(string mensaje)
-        {
-            AppStudio.ToastNotifications.DisplayPackageImageToast.Display(mensaje);
-        }
 
         public bool lanzado { get; set; }
 
