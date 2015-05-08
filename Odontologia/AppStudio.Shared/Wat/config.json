@@ -1,0 +1,20 @@
+{
+  "baseURL": "http://odontologia-hefesoft.azurewebsites.net//",
+  "share": {
+    "enabled": true,
+    "title": "Odontologia",
+    "url": "{currentURL}",
+    "message": "Check out this web {url}"
+  },
+  "appBar": {
+    "enabled": true,
+    "buttons": [
+      {
+        "label": "refrescar",
+        "icon": "refresh",
+        "iconUrl": "",
+        "action": "refresh"
+      }
+    ]
+  }
+}
